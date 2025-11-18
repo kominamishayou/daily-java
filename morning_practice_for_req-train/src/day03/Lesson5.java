@@ -49,7 +49,6 @@ public class Lesson5 {
 			break;
 		default:
 			System.out.println("配列の範囲外の値が入力されました");
-			break;
 		}
 
 	}

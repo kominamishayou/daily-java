@@ -20,8 +20,21 @@ package day04;
 public class Lesson6 {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
-
+//		String[] names = new String[3];
+		String[] names = {"鈴木" , "田中", "佐藤" };
+		String name = "";
+		
+		for(int i = 0; i < names.length; i++ ) {
+			if(i == 2) {
+				name = name + names[i];
+				break;
+			}
+			
+			names[i] = names[i] + ",";
+			name = name + names[i];
+		}
+		
+		System.out.println(name);
 	}
 
 }
