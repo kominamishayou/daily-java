@@ -4,7 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * コンソールレジスタークラス
+ */
 public class ConsoleReader {
+	/**
+	 * 
+	 * @return ログインid
+	 * @throws IOException
+	 */
 	public int inputid () throws IOException {
 		System.out.println("4ケタのログインIDを入力してください");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

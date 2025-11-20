@@ -1,8 +1,16 @@
 package day05.q02;
 
+/**
+ * バリデーションクラス
+ */
 public class Validation {
-	public boolean chekId (int id) {
-		if(id == 1111 || id == 2222) {
+	/**
+	 * 
+	 * @param id
+	 * @return boolean ログイン可否
+	 */
+	public boolean chekId(int id) {
+		if (id == 1111 || id == 2222) {
 			return true;
 		} else {
 			return false;

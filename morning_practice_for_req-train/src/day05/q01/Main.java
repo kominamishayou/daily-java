@@ -41,15 +41,19 @@ class Main {
 		System.out.println("税抜き価格を入力してください");
 		System.out.println("input money?");
 		
+		//税抜き価格を標準入力で受け取って整数型へ変換
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String str = reader.readLine();
 		int price = Integer.parseInt(str);
 		
+		//税抜き価格(price)を表示
 		System.out.println("税抜き価格 : \\" + price);
 		
+		//registerオブジェクトを生成、calcPriceメソッドで税込み価格を計算
 		CashRegister register = new CashRegister();
 		int totalPrice = register.calcPrice(price);
 		
+		//税込み価格(totalPrice)を表示
 		System.out.println("税込み価格 : \\" + totalPrice);
 	}
 

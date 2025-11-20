@@ -59,13 +59,18 @@ import java.io.IOException;
 class Main {
 
 	public static void main(String[] args) throws IOException {
+		// IDを受け取るためにConsoleReaderクラスを生成
 		ConsoleReader cr = new ConsoleReader();
+		// ログイン可否を判断するためにValidationクラスを生成
 		Validation v = new Validation();
 		
+		// ログイン可否(auth)とログインid(id)を初期化
 		boolean auth = false;
 		int id = 0;
 		
+		// ログイン可否がfalseの限りループし続けるwhile文
 		while(!auth) {
+			//ログインIDを受け取り、可否をauthに代入
 			id = cr.inputid();
 			auth = v.chekId(id);
 			
