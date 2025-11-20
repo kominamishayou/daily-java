@@ -59,8 +59,24 @@ import java.io.IOException;
 class Main {
 
 	public static void main(String[] args) throws IOException {
-		/*ここから記入*/
-
+		ConsoleReader cr = new ConsoleReader();
+		Validation v = new Validation();
+		
+		boolean auth = false;
+		int id = 0;
+		
+		while(!auth) {
+			id = cr.inputid();
+			auth = v.chekId(id);
+			
+			if(auth == false) {
+				System.out.println("ログインできません。");
+				System.out.println("もう一度入力してください。");
+			}
+		}
+		
+		System.out.print("ログインに成功しました。");
+		System.out.print("ようこそ、ID:" + id + "さん");
 	}
 
 }
