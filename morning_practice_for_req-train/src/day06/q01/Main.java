@@ -39,8 +39,15 @@ package day06.q01;
 class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
-
+		Phone phone = new Phone();
+		
+		phone.intFee();
+		
+		phone.call();
+		phone.call();
+		
+		int fee = phone.getFee();
+		System.out.println("今月の電話料金は\\" + fee + "です。");
 	}
 
 }
