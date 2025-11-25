@@ -40,7 +40,7 @@
 //			・生成したMemberオブジェクト（コンストラクタ引数：1,"人見"）を配列要素0番目に代入します
 //			・生成したMemberオブジェクト（コンストラクタ引数：2,"植木"）を配列要素0番目に代入します
 //			・生成したMemberオブジェクト（コンストラクタ引数：3,"吉崎"）を配列要素0番目に代入します
-//		 	・MemberManager.show()を呼び出す
+//		 	・MemberManager.show)を呼び出す
 // 			・MemberManager.update()を呼び出し、ID：1のメンバー名を"三浦"に変更する
 // 			・再度MemberManager#show()を呼び出す
 
@@ -68,8 +68,15 @@ package day07.q02;
 public class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
-
+		Member[] members = new Member[3];
+		members[0] = new Member(1,"人見");
+		members[1] = new Member(2,"植木");
+		members[2] = new Member(3,"吉崎");
+		
+		MemberManager.show(members);
+		MemberManager.update(members, 1, "三浦");
+		MemberManager.show(members);
 	}
+	
 
 }
