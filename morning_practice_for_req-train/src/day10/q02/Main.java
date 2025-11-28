@@ -23,10 +23,45 @@
 
 package day10.q02;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, NumberFormatException {
 		/*ここから記入*/
+		System.out.println("1から任意の値までの合計を求めます。");
+		System.out.println("input num?");
+		BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
+		String inputStr = br.readLine();
+		int inputInt = -1;
+		int SUM = 0;
+		List<Integer> list = new ArrayList<>();
+		
+		try {
+			inputInt = Integer.parseInt(inputStr);
+			
+			for(int i = 1; i <= inputInt; i++) {
+				list.add(i);
+				SUM += i;
+			}
+			
+			System.out.println("1から" + list.get(list.size() - 1) + "までの合計は" + SUM);
+			System.out.println("listの要素を表示します");
+			
+			for(int i: list) {
+				System.out.println(i);
+			}
+			
+		} catch(NumberFormatException e) {
+			System.out.println("例外が発生しました。");
+		}
+		
+		
+		
 	}
 
 }

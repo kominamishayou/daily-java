@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class ConsoleReader {
 
-	public int inputPIN() throws IOException {
+	public int inputPIN() throws IOException, IllegalinputException {
 		int pin = -1;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -15,7 +15,12 @@ public class ConsoleReader {
 		String inputString = br.readLine();
 
 		/* ここに記述 */
-
+		pin = Integer.parseInt(inputString);
+		
+//		ここの条件は仮、提出の際は正規表現でバリデーション
+		if(!inputString.matches("^[0-9]{4}$")) {
+			throw new IllegalinputException("不正な入力");
+		}
 		/* 記述終了 */
 
 		pin = Integer.parseInt(inputString);
